@@ -21,10 +21,10 @@ var (
 func main() {
 	flag.Parse()
 	if *inDir == "" {
-		log.Fatal("Please provide an directory")
+		log.Fatal("Please provide an input directory")
 	}
 	if *hdr {
-		fmt.Println("JobName BlockSize Rd-bw Wr-bw Rd-Iops Wr-Iops, Mx-Rd-lat, Mx-Wr-lat")
+		fmt.Println("JobName BlockSize Rd-bw Wr-bw Rd-Iops Wr-Iops, Avg-Rd-lat, Avg-Wr-lat")
 	}
 	SlurpDir(*inDir)
 }
